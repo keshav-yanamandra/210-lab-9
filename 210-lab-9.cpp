@@ -6,6 +6,10 @@
 #include <fstream>
 #include <array>
 #include <numeric>
+//forgot to add vector and
+#include <vector>
+#include <algorithm>
+
 using namespace std;
 
 const int SIZE = 38;
