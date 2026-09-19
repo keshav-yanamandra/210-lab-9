@@ -21,7 +21,6 @@ int main() {
     fin.open("goals.txt");
 
         if (fin.good()) {
-            cout << line;
             line++;
             for (int i = 0; i < SIZE; i++) {
                 fin >> goals[i];
@@ -37,6 +36,9 @@ int main() {
 
     cout << "First game goals: " << goals.front() << endl;
     cout << "Last game goals: " << goals.back() << endl;
+    //more array functions
+    cout << "Goals using at(): " << goals.at(0) << endl;
+    cout << "Goals in last game " << goals[SIZE - 1] << endl;
 
     for (int goal : goals) {
         cout << goal << " ";
