@@ -91,7 +91,26 @@ int main() {
         cout << goal << " ";
     }
 
+    cout << endl;
 
+    cout << "Games played: " << goalsVec.size() << endl;
+    cout << "First game goals: " << goalsVec.front() << endl;
+    cout << "Last game goals: " << goalsVec.back() << endl;
+
+    high = *max_element(goalsVec.begin(), goalsVec.end());
+    low =  *min_element(goalsVec.begin(), goalsVec.end()); 
+    
+    cout << "Most goals in one match: "  << high << endl;
+
+    cout << "Fewest goals in one match: " << low << endl;
+
+    total = accumulate(goalsVec.begin(), goalsVec.end(), 0.0);
+    average = total / goalsVec.size();
+
+    cout << "Total goals: " << total << endl;
+    cout << "Average goals: " << average << endl;
+
+    cout << endl;
 
 
     return 0;
