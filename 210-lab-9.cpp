@@ -24,15 +24,19 @@ int main() {
         if (fin.good()) {
             cout << line;
             line++;
+            for (int i = 0; i < SIZE; i++) {
+                fin >> goals[i];
+            }
 
-
-        fin.close();
+            fin.close();
     }
     else {
         cout << "file not found." << endl;
     }
 
-
+    for (int goal : goals) {
+        cout << goal << " ";
+    }
 
     cout << endl;
 
