@@ -17,6 +17,7 @@ int main() {
     cout << endl;
 
     array<int, SIZE> goals;
+
     ifstream fin;
     int line=0;
     fin.open("goals.txt");
@@ -55,7 +56,6 @@ int main() {
     cout << "Lowest goals: " << low << endl;
     cout << "Average goals: " << total/goals.size() << endl;
 
-
     cout << "All Goals" << endl;
     cout << "---------" << endl;
     
@@ -64,6 +64,33 @@ int main() {
     }
 
     cout << endl;
+
+    cout << "PART 2 vector" << endl;
+    cout << "--------------" << endl;
+    vector<int> goalsVec;
+    ifstream fin2;
+
+
+    fin2.open("goals.txt");
+    if (fin2.good()) {
+
+        while (fin2 >> line) {
+            goalsVec.push_back(line);
+        }
+
+        fin2.close();
+    }
+    else {
+        cout << "File not found." << endl;
+    }
+
+
+    cout << "Goals using vector: ";
+
+    for (int goal : goalsVec) {
+        cout << goal << " ";
+    }
+
 
 
 
