@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <array>
+#include <numeric>
 using namespace std;
 
 const int SIZE = 38;
@@ -40,6 +41,24 @@ int main() {
     cout << "Goals using at(): " << goals.at(0) << endl;
     cout << "Goals in last game " << goals[SIZE - 1] << endl;
 
+    int high = 0;
+    int low = 0;
+    double average = 0;
+    double total = 0;
+
+    //more array functions
+    high = *max_element(goals.begin(), goals.end());
+    low = *min_element(goals.begin(), goals.end());
+    total = accumulate(goals.begin(), goals.end(), 0.0);
+
+    cout << "Highest goals: " << high << endl;
+    cout << "Lowest goals: " << low << endl;
+    cout << "Average goals: " << total/goals.size() << endl;
+
+
+    cout << "All Goals" << endl;
+    cout << "---------" << endl;
+    
     for (int goal : goals) {
         cout << goal << " ";
     }
