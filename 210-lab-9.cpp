@@ -13,7 +13,6 @@ const int SIZE = 38;
 int main() {
 
     cout << "Barcelona goals: ";
-    cout << "1, 2, 3";
     cout << endl;
 
     array<int, SIZE> goals;
@@ -33,6 +32,11 @@ int main() {
     else {
         cout << "file not found." << endl;
     }
+
+    cout << "Games played with array.size: " << goals.size() << endl;
+
+    cout << "First game goals: " << goals.front() << endl;
+    cout << "Last game goals: " << goals.back() << endl;
 
     for (int goal : goals) {
         cout << goal << " ";
